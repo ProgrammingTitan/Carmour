@@ -28,7 +28,7 @@ export default function AddVehicle() {
             year,
             userID : userIDD,
         };
-
+        console.log("here");
         await Axios.post(
             `${PORT}/api/vehicles`, newVehicle, { 
             headers: {

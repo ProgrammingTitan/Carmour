@@ -18,7 +18,7 @@ app.use(pino);
 router.post('/sendAlert', (req, res) => {
     
   
-    const { message } = req.body;
+    const { message, car } = req.body;
 
     if (!message) {
       return res.json({
@@ -32,7 +32,7 @@ router.post('/sendAlert', (req, res) => {
     .create({
       from: process.env.TWILIO_PHONE_NUMBER,
       to: message,
-      body: `Your car alarm has been set! Tampering noticed near vehicle! Access control panel at Google.com`
+      body: `Your car alarm has been set! Tampering noticed near your ${car}! Access control panel at Carmour.com`
     })
     .then(() => {
       res.send(JSON.stringify({ success: true }));

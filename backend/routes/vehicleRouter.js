@@ -25,6 +25,7 @@ router.post("/", auth, async (req,res) => {
             lng: '31.1342'
         });
 
+        console.log("about to save" + obj);
 
         const savedVehicle = await obj.save();
         

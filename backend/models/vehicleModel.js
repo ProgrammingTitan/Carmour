@@ -4,8 +4,7 @@ const vehicleSchema = new mongoose.Schema({
     brand: 
     {
         type: String,
-        required: true,
-        unique:true
+        required: true
     },
     model:
     {
@@ -21,7 +20,7 @@ const vehicleSchema = new mongoose.Schema({
         type: String,
     },
     previousFeed:{
-        type: [],
+        type: [{}],
     },
     userID:{
         type: String,

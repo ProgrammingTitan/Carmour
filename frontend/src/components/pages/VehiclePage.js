@@ -105,7 +105,8 @@ export default function VehiclePage(props) {
        
 
         const newNumber = {
-          message: phoneData.number
+          message: phoneData.number,
+          car: carData.vehicle.model
         }
         await Axios.post(
           `${PORT}/api/texts/sendAlert`, newNumber
