@@ -1,0 +1,44 @@
+:root {
+    --primary-color: rgba( 24,183,241, 1);
+    --primary-color-alpha: rgba( 24,183,241, 0.95);
+    --overlay-color: rgba(255, 255, 255, 0.6);
+    --big-text-color: rgba(246,148,29,1);
+    --secondary-color: rgba(255, 191, 205, 0);
+    --red-color: rgba(255, 0, 0, 0.2);
+    --menu-speed: 0.75s;
+  }
+
+@media(min-width: 700px){
+    .vw-row{
+    width: 100%;
+    display: flex;
+    }
+    .vw-col{
+        width: 50%;
+    }
+}
+.vehicles {
+    background-color: var(--primary-color);
+}
+
+.vw-col img{
+    width: 100%;
+    height: auto;
+}
+
+.vw-row{
+    border: var(--big-text-color) solid 2px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.v-link{
+    text-decoration: none;
+    color: black !important;
+
+}
+
+.v-link:hover{
+    text-decoration: none;
+    color: black;
+}

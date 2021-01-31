@@ -1,0 +1,5 @@
+logo color rgb(128, 223, 255)
+
+
+other color rgb(255, 153, 51)
+

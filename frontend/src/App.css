@@ -1,0 +1,32 @@
+:root {
+  --primary-color: rgba( 24,183,241, 1);
+  --primary-color-alpha: rgba( 24,183,241, 0.95);
+  --overlay-color: rgba(255, 255, 255, 0.6);
+  --big-text-color: rgba(246,148,29,1);
+  --secondary-color: rgba(255, 191, 205, 0);
+  --red-color: rgba(255, 0, 0, 0.2);
+  --menu-speed: 0.75s;
+}
+
+/* Footer Styling  */
+.footer{
+  text-align: center;
+  background-color:rgba(231, 231, 231, 0.9);
+  color: var(--primary-color);
+  font-weight: bolder;
+  /* padding-top: 5px; */
+  padding-bottom: 20px;
+  font-size: 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style: none;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.footer:hover{
+font-size: 1.6rem;
+}
+

@@ -1,0 +1,65 @@
+:root {
+    --primary-color: rgba( 24,183,241, 1);
+    --primary-color-alpha: rgba( 24,183,241, 0.95);
+    --overlay-color: rgba(255, 255, 255, 0.6);
+    --big-text-color: rgba(246,148,29,1);
+    --secondary-color: rgba(255, 191, 205, 0);
+    --red-color: rgba(255, 0, 0, 0.2);
+    --menu-speed: 0.75s;
+  }
+  
+@media(min-width: 700px){
+.container-s{
+    position: relative;
+    padding-top: 1rem;
+}
+}
+@media(max-width:699px)
+{
+    .container-s{
+        width: 100%;
+        margin: 0rem 0rem;
+    }
+}
+
+.ad1-wrap{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.ad1-wrap h2, .ad1-wrap button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(151, 151, 151, 0.12);
+    visibility: visible;
+    color: #fff;
+    opacity: 1;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+.ad1-wrap button{
+    margin-top: 160px;
+    margin-bottom: 20px;
+    padding: 0.2rem 2rem;
+}
+
+.ad1-wrap:hover .ad1-wrap h2{
+    visibility: visible;
+    opacity: 1;
+  }
+
+.ad1-wrap img{
+    width: 100%;
+    height: auto;
+}
