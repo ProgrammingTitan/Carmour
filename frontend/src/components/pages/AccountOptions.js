@@ -53,11 +53,11 @@ export default class AccountOptions extends Component {
                 <div>
                     <img /> 
                 </div>
-                <div>
-                    <h3>My Account: </h3>
+                <div style={{textAlign:'center'}}>
+                    <h3 style={{color:'rgba( 24,183,241, 1)'}}>My Account: </h3>
                     <h2>{this.state.user.displayName}</h2>
-                    <h3>{this.state.user.email}</h3>
-                    <h3>{this.state.user.phoneNumber}</h3>
+                    <h4 style={{color:'rgba( 24,183,241, 1)'}}>{this.state.user.email}</h4>
+                    <h4 style={{color:'rgba( 24,183,241, 1)'}}>{this.state.user.phoneNumber}</h4>
                 </div>
             </div>
             {/* <div>

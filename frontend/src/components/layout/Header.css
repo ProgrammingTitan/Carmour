@@ -279,23 +279,32 @@
   
   .menu-wrap .menu > div > div > ul > li {
     list-style: none;
-    color: var(--big-text-color);
+    color: var(white);
     font-size: 1.7rem;
     font-weight: bolder;
     /* font-family: 'Sofia', cursive; */
     padding: 1rem;
   }
   .menu-wrap .menu > div > div > ul > li:active{
-    color:white;
+    color:var(--big-text-color);
+  }
+  .menu-wrap .menu > div > div > ul > li:hover{
+    color:var(--big-text-color);
   }
   
   .menu-wrap .menu > div > div > ul > li > a {
-    color: inherit;
+    color: white;
     text-decoration: none;
     transition: color 0.4s ease;
     /* font-family: 'Sofia', cursive; */
   }
   
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color:var(--big-text-color) !important;
+  }
+  .menu-wrap .menu > div > div > ul > li > a:active {
+    color:var(--big-text-color);
+  }
 
   
 

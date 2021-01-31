@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import Axios from 'axios';
 import UserContext from '../context/UserContext';
 import ErrorNotice from '../misc/ErrorNotice';
+import './Auth.css'
 
 export default function Login() {
     const [email, setEmail] = useState();
@@ -45,9 +46,10 @@ export default function Login() {
 
     return (
         <div className="page">
-        <h2>Login</h2>
+        <h2>Login</h2> 
         {error && <ErrorNotice message={error} clearError={ () => setError(undefined)} /> }
         <form className="form" onSubmit={submit}>
+            
             <label htmlFor="login-email">Email</label>
             <input id="login-email" type="email" onChange = {e => setEmail(e.target.value)}/>
             

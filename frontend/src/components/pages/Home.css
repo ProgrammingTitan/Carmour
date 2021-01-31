@@ -3,6 +3,7 @@
     --primary-color-alpha: rgba( 24,183,241, 0.95);
     --overlay-color: rgba(255, 255, 255, 0.6);
     --big-text-color: rgba(246,148,29,1);
+    --big-text-color-alpha: rgba(246,148,29,0.9);
     --secondary-color: rgba(255, 191, 205, 0);
     --red-color: rgba(255, 0, 0, 0.2);
     --menu-speed: 0.75s;
@@ -26,6 +27,8 @@
     width: 100%;
     position: relative;
     display: inline-block;
+    margin-bottom: 1rem;
+    border-radius: 20px;
 }
 
 .ad1-wrap h2, .ad1-wrap button{
@@ -34,32 +37,103 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(151, 151, 151, 0.12);
+    background: rgba(0, 0, 0, 0.32);
     visibility: visible;
-    color: #fff;
+    color: var(--big-text-color);
     opacity: 1;
     margin: auto;
     text-align: center;
     display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  font-weight: lighter;
   
     /* transition effect. not necessary */
     transition: opacity .2s, visibility .2s;
 }
 
 .ad1-wrap button{
-    margin-top: 160px;
+    margin-top: 175px;
     margin-bottom: 20px;
-    padding: 0.2rem 2rem;
+    padding: 0rem 2rem;
+    background-color: var(--big-text-color-alpha);
+    border: var(--big-text-color-alpha) solid 2px;
+    border-radius: 20px;
+    color: white;
+}
+.ad1-wrap button:hover{
+    background-color: white;
+    color: var(--big-text-color);
 }
 
-.ad1-wrap:hover .ad1-wrap h2{
+.ad1-wrap:hover h2{
     visibility: visible;
+    background: rgba(151, 151, 151, 0);
     opacity: 1;
   }
 
 .ad1-wrap img{
     width: 100%;
     height: auto;
+    border-radius: 8px;
+}
+
+.ad2-wrap{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.ad2-wrap h2, .ad2-wrap button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.32);
+    visibility: visible;
+    color: var(--primary-color);
+    opacity: 1;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  border-radius: 20px;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+.ad2-wrap button{
+    margin-top: 175px;
+    margin-bottom: 20px;
+    padding: 0rem 2rem;
+    background-color: var(--primary-color-alpha);
+    border: var(--primary-color-alpha) solid 2px;
+    border-radius: 20px;
+    color:white;
+}
+
+.ad2-wrap button:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.ad2-wrap:hover h2{
+    visibility: visible;
+    background: rgba(151, 151, 151, 0);
+    opacity: 1;
+  }
+
+.ad2-wrap img{
+    width: 100%;
+    height: auto;
+}
+
+.main-ad{
+    background-color: rgba(0, 0, 0, 0.32);
 }

@@ -25,7 +25,7 @@ export default function VehicleWidget() {
             {
                 userData.vehicles ?
                 <>
-                <h2>My Vehicles:</h2>
+                {userData.vehicles["0"] && <h2>My Vehicles:</h2> }
                 {
             userData.vehicles.map((vehicle,key) => (
                 <a className="v-link" href={`/Vehicle/${vehicle._id}`}>

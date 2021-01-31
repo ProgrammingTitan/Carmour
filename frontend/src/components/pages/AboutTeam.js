@@ -59,7 +59,7 @@ const AboutTeam = (props) => {
        <br/>
       
        </div>
-       <p style={{display:'block'}}>Paul is a 5th year CSULB, with a minor in Computer Science. He has experience with Web Development and he wants to create  a project that will help provide security to his community</p>
+       <p style={{display:'block',padding: '0.1rem 0.6rem'}}>Paul is a 5th year CSULB, with a minor in Computer Science. He has experience with Web Development and he wants to create  a project that will help provide security to his community</p>
        <List component="nav" aria-label="secondary mailbox folders">
         <ListItemLink href="https://www.linkedin.com/in/paul-valenzuela-511b28187/">
         <ListItemIcon><LinkedInIcon style={{ color: 'black' }} /></ListItemIcon>
@@ -85,7 +85,7 @@ const AboutTeam = (props) => {
        <br/>
       
        </div>
-       <p style={{display:'block'}}>Alfredo has background work in automobile industry. His center point of interest is embedded systems</p>
+       <p style={{display:'block',padding: '0.1rem 0.6rem'}}>Alfredo has background work in automobile industry. His center point of interest is embedded systems</p>
        <List component="nav" aria-label="secondary mailbox folders">
         <ListItemLink href="https://www.linkedin.com/in/paul-valenzuela-511b28187/">
         <ListItemIcon><LinkedInIcon style={{ color: 'black' }} /></ListItemIcon>
@@ -111,7 +111,7 @@ const AboutTeam = (props) => {
        <br/>
       
        </div>
-       <p style={{display:'block'}}>Anh is a Self-motivated CE student. He is driven to apply renewable power source to solve real life problems</p>
+       <p style={{display:'block',padding: '0.1rem 0.6rem'}}>Anh is a Self-motivated CE student. He is driven to apply renewable power source to solve real life problems</p>
        <List component="nav" aria-label="secondary mailbox folders">
         <ListItemLink href="https://www.linkedin.com/in/paul-valenzuela-511b28187/">
         <ListItemIcon><LinkedInIcon style={{ color: 'black' }} /></ListItemIcon>

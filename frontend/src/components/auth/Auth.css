@@ -1,0 +1,77 @@
+:root {
+    --primary-color: rgba( 24,183,241, 1);
+    --primary-color-alpha: rgba( 24,183,241, 0.95);
+    --overlay-color: rgba(255, 255, 255, 0.6);
+    --big-text-color: rgba(246,148,29,1);
+    --secondary-color: rgba(255, 191, 205, 0);
+    --red-color: rgba(255, 0, 0, 0.2);
+    --menu-speed: 0.75s;
+  }
+  
+
+.form label,
+.form input{
+    display: block;
+}
+
+.form input{
+    margin-bottom: 1rem;
+}
+
+
+.form label{
+    margin-bottom: 0.2rem;
+    color: var(--primary-color);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="password"]{
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 1.1 rem;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 550px){
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="number"],
+    .form input[type="password"]{
+        width: 100%;
+        padding: 1rem;
+        font-size: 2rem;
+
+    }
+    
+.form label{
+    font-size: 2rem;
+}
+
+}
+
+.form input:focus{
+    outline:none;
+    border: 1px solid var(--secondary-color);
+    box-shadow: inset 0px 0px 5px var(--big-text-color);
+}
+
+.form input[type="submit"] {
+    border: 1px solid var(--big-text-color);
+    background-color: var(--primary-color);
+    color:white;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+.form input[type="submit"]:hover{
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+h2{
+    color:var(--primary-color);
+}

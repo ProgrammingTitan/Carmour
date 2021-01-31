@@ -1,6 +1,7 @@
 :root {
     --primary-color: rgba( 24,183,241, 1);
     --primary-color-alpha: rgba( 24,183,241, 0.95);
+    --darker-primary-color:  rgba(23, 152, 199,1);
     --overlay-color: rgba(255, 255, 255, 0.6);
     --big-text-color: rgba(246,148,29,1);
     --secondary-color: rgba(255, 191, 205, 0);
@@ -17,8 +18,9 @@
         width: 50%;
     }
 }
-.vehicles {
-    background-color: var(--primary-color);
+.vehicles h2{
+    padding-left: 0.5rem;
+    /* background-color: var(--primary-color); */
 }
 
 .vw-col img{
@@ -26,10 +28,17 @@
     height: auto;
 }
 
+.vw-col h3, h4{
+    padding-left: 1rem;
+}
+
 .vw-row{
-    border: var(--big-text-color) solid 2px;
+    border: var(--darker-primary-color) solid 3px;
     border-radius: 8px;
     margin-bottom: 15px;
+    background-color: var(--primary-color);
+    color:white;
+    padding-top: 1rem;
 }
 
 .v-link{

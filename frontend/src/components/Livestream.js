@@ -17,7 +17,7 @@ const Livestream = (props) => {
 
   return (
     <div>
-      <Button style={{alignContent:'center'}}color="warning" onClick={toggle}>Watch Livestream</Button>
+      <Button style={{alignContent:'center'},{marginLeft:'4rem'},{backgroundColor:' rgba(246,148,29,1)'}} onClick={toggle}>Watch Livestream</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Live Feed</ModalHeader>
         <ModalBody>

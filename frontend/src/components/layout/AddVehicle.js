@@ -54,7 +54,7 @@ export default function AddVehicle() {
 
     return (
         <div className="page">
-            <h1 className="control-panel-heading">Add New Vehicle</h1>
+            <h1 className="control-panel-heading" style={{color: 'rgba( 24,183,241, 1)'}}>Add New Vehicle</h1>
             {error && <ErrorNotice message={error} clearError={ () => setError(undefined)} /> }
             <form className="form" onSubmit={submit}  enctype="multipart/form-data">
                 <label htmlFor="brand">Brand</label>

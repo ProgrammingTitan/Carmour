@@ -13,7 +13,7 @@
   text-align: center;
   background-color:rgba(231, 231, 231, 0.9);
   color: var(--primary-color);
-  font-weight: bolder;
+  font-weight: normal;
   /* padding-top: 5px; */
   padding-bottom: 20px;
   font-size: 1rem;

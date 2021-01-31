@@ -32,6 +32,7 @@ import MapContainer from '../MapContainer';
 // import Copyright from './Copyright';
 import './VehiclePage.css';
 import axios from 'axios';
+import { Spinner } from 'reactstrap';
 
 const PORT = process.env.PORT || 'http://localhost:5000' ;
 
@@ -44,12 +45,16 @@ export default function VehiclePage(props) {
     const [infoModal, setInfoModal] = useState(false);
     const [notificationModal, setNotificationModal] = useState(false);
     const [locationModal, setLocationModal] = useState(false);
+    const [batteryModal, setBatteryModal] = useState(false);
+    const [videoModal, setVideoModal] = useState(false);
 
     const vehicleID = props.match.match.params.id;
 
     const infoToggle = () => setInfoModal(!infoModal);
     const notificationToggle = () => setNotificationModal(!notificationModal);
     const locationToggle = () => setLocationModal(!locationModal);
+    const batteryToggle = () => setBatteryModal(!batteryModal);
+    const videoToggle = () => setVideoModal(!videoModal);
 
     const [carData, setCarData] = useState({
       vehicle: {},
@@ -115,7 +120,7 @@ export default function VehiclePage(props) {
         <div>
           {carData.gotData ?
              <div>
-       <h2 style = {{textAlign:'center', 'color':'rgb(128, 223, 255)'}}>{carData.vehicle.brand} {carData.vehicle.model}</h2>
+       <h2 style = {{textAlign:'center', 'color':'rgba( 24,183,241, 1)'}}>{carData.vehicle.brand} {carData.vehicle.model}</h2>
         <ul>
         <Container>
             <Row>
@@ -153,7 +158,7 @@ export default function VehiclePage(props) {
             <p>Longtude: {carData.vehicle.lng} E</p>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={infoToggle}>Close</Button>{' '}
+          <Button style={{backgroundColor: 'rgba( 24,183,241, 1)'}} onClick={infoToggle}>Close</Button>{' '}
         </ModalFooter>
       </Modal>
     </Col>
@@ -173,7 +178,7 @@ export default function VehiclePage(props) {
             />
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={locationToggle}>Close</Button>{' '}
+          <Button style={{backgroundColor: 'rgba( 24,183,241, 1)'}} onClick={locationToggle}>Close</Button>{' '}
         </ModalFooter>
       </Modal>
       </Col>
@@ -190,7 +195,7 @@ export default function VehiclePage(props) {
             Registered Phone Number: {phoneData.number}
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={notificationToggle}>Close</Button>{' '}
+          <Button style={{backgroundColor: 'rgba( 24,183,241, 1)'}} onClick={notificationToggle}>Close</Button>{' '}
         </ModalFooter>
       </Modal>
     </Col>
@@ -199,20 +204,47 @@ export default function VehiclePage(props) {
       <Row>
     
     <Col md = "4" xs="12">
-    <List component="nav" aria-label="secondary mailbox folders">
-        <ListItemLink href="https://www.linkedin.com/in/paul-valenzuela-511b28187/">
+    <List onClick={batteryToggle} component="nav" aria-label="secondary mailbox folders">
+        <ListItemLink>
         <ListItemIcon><BatteryUnknownIcon style={{ color: 'black' }} /></ListItemIcon>
           <ListItemText primary="Battery Level" />
         </ListItemLink>
         </List>
+        <Modal isOpen={batteryModal} toggle={batteryToggle} >
+        <ModalHeader toggle={batteryToggle}>Battery Level</ModalHeader>
+        <ModalBody>
+           Undefined
+        </ModalBody>
+        <ModalFooter>
+          <Button style={{backgroundColor: 'rgba( 24,183,241, 1)'}} onClick={infoToggle}>Close</Button>{' '}
+        </ModalFooter>
+      </Modal>
     </Col>
     <Col md = "4" xs="12">
-    <List component="nav" aria-label="secondary mailbox folders">
-        <ListItemLink href="https://www.linkedin.com/in/paul-valenzuela-511b28187/">
+    <List onClick={videoToggle} component="nav" aria-label="secondary mailbox folders">
+        <ListItemLink>
         <ListItemIcon><VideoLibraryIcon style={{ color: 'black' }} /></ListItemIcon>
           <ListItemText primary="Recorded Videos" />
         </ListItemLink>
         </List>
+        <Modal isOpen={videoModal} toggle={videoToggle} >
+        <ModalHeader toggle={videoToggle}>Recorded Footage</ModalHeader>
+        <ModalBody >
+         {
+           carData.vehicle.previousFeed.map((video,key) =>
+            <>
+            <h4>{video.date}</h4>
+            <iframe width="100%" height="auto"
+src={video.src}>
+</iframe>
+            </>
+           )
+         }
+        </ModalBody>
+        <ModalFooter>
+          <Button style={{backgroundColor: 'rgba( 24,183,241, 1)'}} onClick={videoToggle}>Close</Button>{' '}
+        </ModalFooter>
+      </Modal>
       </Col>
       <Col md = "4" xs="12">
       <List onClick={alarmText} component="nav" aria-label="secondary mailbox folders">
@@ -228,7 +260,7 @@ export default function VehiclePage(props) {
         </ul>
      </div>
      :
-     <h1>This Car does not exist</h1>
+     <Spinner color="warning" />
           }
         </div>
     )
